@@ -641,7 +641,7 @@ Sometimes whitespace is significant, for example inside a link it will show with
 In PHP you have access to the `$CFG` object to allow access to properties. Mustache rendering also exposes a globals object automatically during rendering. For example:
 
 ```handlebars
-<a href="{{globals.config.wwwroot}}/login/logout.php?sesskey={{globals.config.sesskey}}">{{#str}} logout, core {{/str}}</a>
+<a href="{{config.wwwroot}}/login/logout.php?sesskey={{config.sesskey}}">{{#str}} logout, core {{/str}}</a>
 ```
 
 The properties available on the `globals.config` object are the same as normally exposed for JavaScript; these are gathered from `get_config_for_javascript()` function in `lib/outputrequirementslib.php`.
